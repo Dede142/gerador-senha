@@ -12,7 +12,7 @@
     <section class="conteudo">
         <div class="conteudo-titulo">
             <img src="unlock.svg" alt="cadeado fechado">
-            <h2 class="titulo-principal">Gerador de senha</h2>
+            <h2 class="titulo-principal">Gerador de senhas</h2>
             <h3 class="titulo-secundario">Gere instantaneamente uma senha aleatória e segura</h3>
         </div>
         <div class="conteudo-senha">
@@ -23,13 +23,13 @@
             <h3 class="parametro-titulo">Personalize sua senha</h3>
             <div class="parametro-coluna__senha">
                 <div class="parametro-senha">
-                    <h4 class="parametro-senha__titulo">Numero de caracteres</h4>
+                    <h4 class="parametro-senha__titulo">Número de caracteres</h4>
                     <div class="parametro-senha-botoes">
-                    <button class="parametro-senha__botao">-</button>
-                    <p class="parametro-senha__texto">12</p>
-                    <button class="parametro-senha__botao">+</button>
-                </div>
-                </div>
+                        <button class="parametro-senha__botao">-</button>
+                        <p class="parametro-senha__texto">12</p>
+                        <button class="parametro-senha__botao">+</button>
+                    </div>
+                </div>               
                 <div class="parametro-senha">
                     <h4 class="parametro-senha__titulo">Características da senha</h4>
                     <div class="parametro-senha-checkbox">
@@ -52,68 +52,18 @@
                 <div class="parametro-senha">
                     <h4 class="parametro-senha__titulo">Força da senha</h4>
                     <div class="barra"></div>
-                    <div class="força forte"></div>
-                    <div class="parametro-senha-textos"></div>
-                    <p>Fraca</p>
-                    <p>Media</p>
-                    <p>Forte</p>
+                    <div class="forca fraca"></div>
+                    <div class="parametro-senha-textos">
+                        <p>Fraca</p>
+                        <p>Média</p>
+                        <p>Forte</p>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
     <script src="main.js"></script>
-
-</body>
-
+</body> 
 </html>
 
-
-
-08:00+++
-const numeroSenha = document.querySelector('.parametro-senha__texto');
- let tamanhoSenha = 5;
-numeroSenha.textContent = tamanhoSenha;
-
-const botoes = document.querySelectorAll('.parametro-senha__botao');
-
-botoes[0].onclick = diminuiTamanho;
-botoes[1].onclick = aumentaTamanho;
-
-function diminuiTamanho(){
-    if(tamanhoSenha > 1){
-        
-        //tamanhoSenha = tamanhoSenha-1;
-        tamanhoSenha--;
-    }
-    numeroSenha.textContent = tamanhoSenha;
-}
-
-function aumentaTamanho(){
-    if(tamanhoSenha < 20){
-        
-        //tamanhoSenha = tamanhoSenha+1;
-        tamanhoSenha++;
-    }
-    numeroSenha.textContent = tamanhoSenha;
-}
-
-const campoSenha = document.querySelector('#campo-senha');
-const checkbox = document.querySelector('.checkbox')
-
-console.log(checkbox[0].checked);
-
-const letrasMaiusculas = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
-const letrasMinusculas = 'abcdefghijklmnopqrstuvwxyz';
-const numeros = '0123456789';
-const simbolos = '!@#$%&';
-
-geraSenha();
-function geraSenha(){
-    let senha = '';
-    for (let i = 0; i < tamanhoSenha;i++){
-        let numeroAleatorio = Math.random()*letrasMaiusculas.length;
-        numeroAleatorio = Math.floor(numeroAleatorio);
-        senha = senha + letrasMaiusculas[numeroAleatorio];
-    }
-    campoSenha.value = senha;
-}
+04:00
